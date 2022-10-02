@@ -1,5 +1,6 @@
+
 let gameBoard = (() =>{
-    let gameBoardFrame = [];
+    let gameBoardFrame = ["O"];
     return {gameBoardFrame};
 })();
 
@@ -22,6 +23,20 @@ let createPlayer = (playerName, playerNumber, assignedXO) => {
 
 let playerOne = createPlayer("Kunle", 5, "O")
 
+let fillBoard = (() => {
+    const gBoard = document.querySelectorAll(".grid-box")
+
+    console.log(gBoard)
+
+    console.log(`${gBoard} and the array is ${gameBoard.gameBoardFrame}`)
+
+    gBoard[0].textContent = gameBoard.gameBoardFrame
+
+    return {}
+})();
+
 console.log(playerOne)
 
 console.log(playerOne.getPlayerName.playerName())
+
+fillBoard
